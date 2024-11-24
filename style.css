@@ -1,0 +1,96 @@
+/* Estilos Globales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+/* Contenedor General */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #6c63ff, #56c1ff);
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0.5em 0 0;
+    font-size: 1.2em;
+}
+
+/* Publicaciones */
+.post {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2em 0;
+    overflow: hidden;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.post .content {
+    padding: 1.5em;
+}
+
+.post h2 {
+    margin-top: 0;
+    color: #6c63ff;
+    font-weight: 600;
+    font-size: 1.8em;
+}
+
+.post p {
+    margin: 0.5em 0 0;
+    line-height: 1.6;
+}
+
+/* Pie de Página */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+    .post {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .post img {
+        width: 50%;
+    }
+
+    .post .content {
+        width: 50%;
+    }
+}
