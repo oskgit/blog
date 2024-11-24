@@ -1,0 +1,176 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 60px 0; /* Espacio adicional para dar margen */
+    display: flex;
+    flex-direction: column; /* Asegura que el título y subtítulo estén uno debajo del otro */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto dentro de los elementos */
+}
+
+header .container {
+    width: 90%;
+    max-width: 1100px; /* Limita el ancho máximo */
+}
+
+/* Título */
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* Subtítulo */
+header p {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las entradas */
+    justify-content: space-between; /* Distribuye las entradas uniformemente */
+}
+
+/* Posts */
+.post {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    width: calc(33.333% - 20px); /* Tres entradas por fila */
+    display: flex;
+    flex-direction: column;
+    text-decoration: none; /* Elimina el subrayado en los enlaces */
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.post img {
+    width: 100%; /* La imagen se adapta al ancho del contenedor */
+    height: 200px; /* Altura ajustada para dar más espacio a las imágenes */
+    object-fit: cover; /* Recorta las imágenes para que se vean bien */
+}
+
+.post .content {
+    padding: 20px;
+    flex: 1; /* Empuja el contenido para que ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el título y el texto estén ordenados */
+}
+
+.post .content h2 {
+    margin: 0 0 15px; /* Espaciado entre título y subtítulo */
+    font-size: 1.6em; /* Tamaño ajustado para títulos */
+    color: #333;
+}
+
+.post .content p {
+    margin: 0;
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Estilo para evitar subrayados y links visibles */
+.post a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Añadir una separación al final de la entrada para que el texto no se quede pegado a la imagen */
+.post p {
+    clear: both;
+    line-height: 1.6;
+}
+/* Estilo de las imágenes dentro del texto */
+figure {
+    margin: 20px 0;
+    padding: 0;
+}
+
+/* Imágenes alineadas a la izquierda */
+.image-left {
+    float: left;
+    margin-right: 20px;
+    max-width: 45%;
+}
+
+/* Imágenes alineadas a la derecha */
+.image-right {
+    float: right;
+    margin-left: 20px;
+    max-width: 45%;
+}
+/* Ajustes para las imágenes dentro de los figure */
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Estilo para los captions de las imágenes */
+figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+/* Estilo para las listas de ingredientes */
+ul {
+    padding-left: 20px;
+}
+
+/* Estilo para los títulos de sección */
+h3 {
+    margin-top: 30px;
+    font-size: 1.6em;
+    color: #333;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .post {
+        width: calc(50% - 20px); /* Dos entradas por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .post {
+        width: 100%; /* Una entrada por fila en pantallas muy pequeñas */
+    }
+}
